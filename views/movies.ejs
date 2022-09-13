@@ -4,15 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./styles/style.css" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
     <h1>Movies</h1>
+    <div >
+            <% Array.from(movies.results).forEach((movie) => { %>
+                <div class= "inline-block " >
 
-    <% Array.from(movies.results).forEach((movie, index) => { %>
-
-        <%= movie.title %>
-
-    <% }) %>
+                    <!-- image -->
+                    <img class= "" src='https://image.tmdb.org/t/p/original<%= movie.backdrop_path || movie.poster_path %>'>
+                    <!-- Description -->
+                    <p class="truncate max-w-md" ><%= movie.overview %></p>
+                    <!-- title -->
+                    <%= movie.original_titlem || movie.title || movie.name %>                    
+                </div>
+        <% }) %>
+    </div>
 </body>
 </html>
