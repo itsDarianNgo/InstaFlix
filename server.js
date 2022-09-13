@@ -7,8 +7,12 @@ const MongoStore = require('connect-mongo')(session)
 const flash = require('express-flash')
 const logger = require('morgan')
 const connectDB = require('./config/database')
+
+// Routes
 const mainRoutes = require('./routes/main')
 const todoRoutes = require('./routes/todos')
+const moviesRoutes = require ('./routes/movies')
+
 const path = require('path');
 const API_KEY = process.env.API_KEY;
 
@@ -41,10 +45,13 @@ app.use(passport.initialize())
 app.use(passport.session())
 
 app.use(flash())
-  
+
+// Routes
 app.use('/', mainRoutes)
 app.use('/todos', todoRoutes)
- 
+app.use('/movies',moviesRoutes)
+
+
 app.listen(process.env.PORT, ()=>{
     console.log('Server is running, you better catch it!')
 })    
