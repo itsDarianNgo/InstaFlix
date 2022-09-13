@@ -7,8 +7,9 @@
     <link href="./styles/style.css" rel="stylesheet">
     <title>InstaFlix</title>
 </head>
-
+<% const API_KEY = process.env.API_KEY; %>
 <body>
+    <!-- Header -->
     <header class="flex flex-col sm:flex-row m-5 justify-between items-center h-auto">
         <div class="flex flex-grow justify-evenly max-w-2xl">
         <!-- Home -->
@@ -56,7 +57,24 @@
             </div>  
         </div>    
     </header>
-
+    <!-- NAV  -->
+    <nav class="relative">
+        <div>
+            <ul  class="flex px-10 sm:px-20 text-2xl whitespace-nowrap space-x-10 sm:space-x-20 overflow-x-auto overflow-hidden scrollbar-hide scroll-smooth">
+                <li class="last:pr-24 cursor-pointer transition duration-100 transform hover:scale-125 hover:text-white active:text-red-500">Trending</li>
+                <li class="last:pr-24 cursor-pointer transition duration-100 transform hover:scale-125 hover:text-white active:text-red-500">Top Rated</li>
+                <li class="last:pr-24 cursor-pointer transition duration-100 transform hover:scale-125 hover:text-white active:text-red-500">Action</li>
+                <li class="last:pr-24 cursor-pointer transition duration-100 transform hover:scale-125 hover:text-white active:text-red-500">Comedy</li>
+                <li class="last:pr-24 cursor-pointer transition duration-100 transform hover:scale-125 hover:text-white active:text-red-500">Horror</li>
+                <li class="last:pr-24 cursor-pointer transition duration-100 transform hover:scale-125 hover:text-white active:text-red-500">Romance</li>
+                <li class="last:pr-24 cursor-pointer transition duration-100 transform hover:scale-125 hover:text-white active:text-red-500">Mystery</li>
+                <li class="last:pr-24 cursor-pointer transition duration-100 transform hover:scale-125 hover:text-white active:text-red-500">Sci-Fi</li>
+                <li class="last:pr-24 cursor-pointer transition duration-100 transform hover:scale-125 hover:text-white active:text-red-500">Western</li>
+                <li class="last:pr-24 cursor-pointer transition duration-100 transform hover:scale-125 hover:text-white active:text-red-500">Animation</li>
+                <li class="last:pr-24 cursor-pointer transition duration-100 transform hover:scale-125 hover:text-white active:text-red-500">TV Movie</li>
+            </ul>
+        </div>
+    </nav>
 
 
 
