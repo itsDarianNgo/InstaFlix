@@ -35,34 +35,6 @@ app.use(
       store: new MongoStore({ mongooseConnection: mongoose.connection }),
     })
   )
-  
-// Test
-app.get("/", function (req, res) {
-  var movies = [
-    {
-      title: 'Trending',
-      url: `/trending/all/week?api_key=${process.env.API_KEY}&language=en-US`
-    },
-    {
-      title: 'Dumbledore',
-      url: "Headmaster"
-    },
-    {
-      title: 'Snape',
-      url: "Professor"
-    },
-    {
-      title: 'Hermione',
-      url: "Student"
-    }
-     ];
-  const subheading = "I though we should involve some magic";
-
-  res.render("index", {
-    movies: movies,
-    subheading: subheading
-  });
-});
 
 // Passport middleware
 app.use(passport.initialize())
