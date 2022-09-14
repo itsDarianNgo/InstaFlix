@@ -11,6 +11,19 @@ router.get('/logout', authController.logout)
 router.get('/signup', authController.getSignup)
 router.post('/signup', authController.postSignup)
 
+// get movie categories
+router.get('/trending', homeController.getTrending)
+router.get('/toprated', homeController.getTopRated)
+router.get('/action', homeController.getAction)
+router.get('/comedy', homeController.getComedy)
+router.get('/horror', homeController.getHorror)
+router.get('/romance', homeController.getRomance)
+router.get('/mystery', homeController.getMystery)
+router.get('/scifi', homeController.getSciFi)
+router.get('/western', homeController.getWestern)
+router.get('/animation', homeController.getAnimation)
+router.get('/tvmovie', homeController.getTvMovie)
+
 
 // router.get('/trending', authController.getTrending)
 
