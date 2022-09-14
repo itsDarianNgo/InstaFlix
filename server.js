@@ -7,16 +7,18 @@ const MongoStore = require('connect-mongo')(session)
 const flash = require('express-flash')
 const logger = require('morgan')
 const connectDB = require('./config/database')
+require('dotenv').config({path: './config/.env'})
 
 // Routes
 const mainRoutes = require('./routes/main')
 const todoRoutes = require('./routes/todos')
+// this will change the route used
 const moviesRoutes = require ('./routes/movies')
 
 const path = require('path');
 const API_KEY = process.env.API_KEY;
 
-require('dotenv').config({path: './config/.env'})
+
 
 // Passport config
 require('./config/passport')(passport)
@@ -49,6 +51,7 @@ app.use(flash())
 // Routes
 app.use('/', mainRoutes)
 app.use('/todos', todoRoutes)
+// this will change the EJS page rendered
 app.use('/movies',moviesRoutes)
 
 
