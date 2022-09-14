@@ -14,6 +14,7 @@ const mainRoutes = require('./routes/main')
 const todoRoutes = require('./routes/todos')
 // this will change the route used
 const moviesRoutes = require ('./routes/movies')
+const actionRoutes = require ('./routes/action')
 
 const path = require('path');
 const API_KEY = process.env.API_KEY;
@@ -53,6 +54,7 @@ app.use('/', mainRoutes)
 app.use('/todos', todoRoutes)
 // this will change the EJS page rendered
 app.use('/movies',moviesRoutes)
+app.use('/action',actionRoutes)
 
 
 app.listen(process.env.PORT, ()=>{

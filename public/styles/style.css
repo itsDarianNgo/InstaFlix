@@ -524,6 +524,9 @@ video {
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
 }
+.mt-1 {
+  margin-top: 0.25rem;
+}
 .mb-1 {
   margin-bottom: 0.25rem;
 }
@@ -536,9 +539,6 @@ video {
 .mr-2 {
   margin-right: 0.5rem;
 }
-.mt-1 {
-  margin-top: 0.25rem;
-}
 .block {
   display: block;
 }
@@ -547,6 +547,9 @@ video {
 }
 .flex {
   display: flex;
+}
+.h-6 {
+  height: 1.5rem;
 }
 .h-auto {
   height: auto;
@@ -557,8 +560,8 @@ video {
 .h-screen {
   height: 100vh;
 }
-.h-6 {
-  height: 1.5rem;
+.w-6 {
+  width: 1.5rem;
 }
 .w-12 {
   width: 3rem;
@@ -572,14 +575,11 @@ video {
 .w-full {
   width: 100%;
 }
-.w-6 {
-  width: 1.5rem;
+.max-w-md {
+  max-width: 28rem;
 }
 .max-w-2xl {
   max-width: 42rem;
-}
-.max-w-md {
-  max-width: 28rem;
 }
 .flex-grow {
   flex-grow: 1;
@@ -675,14 +675,18 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(37 99 235 / var(--tw-bg-opacity));
 }
+.p-2 {
+  padding: 0.5rem;
+}
 .p-10 {
   padding: 2.5rem;
 }
 .p-2\.5 {
   padding: 0.625rem;
 }
-.p-2 {
-  padding: 0.5rem;
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 .px-10 {
   padding-left: 2.5rem;
@@ -695,10 +699,6 @@ video {
 .px-6 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-}
-.px-5 {
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
 }
 .pb-6 {
   padding-bottom: 1.5rem;
@@ -750,6 +750,10 @@ video {
 .tracking-tight {
   letter-spacing: -0.025em;
 }
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
 .text-gray-900 {
   --tw-text-opacity: 1;
   color: rgb(17 24 39 / var(--tw-text-opacity));
@@ -757,10 +761,6 @@ video {
 .text-gray-500 {
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
-}
-.text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 .text-blue-600 {
   --tw-text-opacity: 1;
@@ -789,6 +789,9 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
+.duration-200 {
+  transition-duration: 200ms;
+}
 .duration-100 {
   transition-duration: 100ms;
 }
@@ -797,9 +800,6 @@ video {
 }
 .duration-150 {
   transition-duration: 150ms;
-}
-.duration-200 {
-  transition-duration: 200ms;
 }
 .ease-in {
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
