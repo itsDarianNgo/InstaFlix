@@ -1,3 +1,4 @@
+require('dotenv').config({path: './config/.env'})
 const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
@@ -7,7 +8,6 @@ const MongoStore = require('connect-mongo')(session)
 const flash = require('express-flash')
 const logger = require('morgan')
 const connectDB = require('./config/database')
-require('dotenv').config({path: './config/.env'})
 
 // Routes
 const mainRoutes = require('./routes/main')
