@@ -7,7 +7,7 @@ module.exports = {
             const moviesAPI = await axios.get(`https://api.themoviedb.org/3/trending/all/week?api_key=${API_KEY}`)
             // console.log(moviesAPI.data)
             // changing res.render('movies') will change the rendered EJS page
-            res.render('trending.ejs', { movies : moviesAPI.data})
+            res.render('index.ejs', { movies : moviesAPI.data})
         } catch (err) {
             if(err.response) {
                 console.log(err.response.data)
