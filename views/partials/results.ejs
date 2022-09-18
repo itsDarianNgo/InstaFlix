@@ -1,19 +1,21 @@
 <div class="px-5 my-10 sm:grid md:grid-cols-2 xl:grid-cols-3">
     <% Array.from(movies.results).forEach((movie) => { %>
         <div class= "inline-block group cursor-pointer p-2 transition duration-200 ease-in transform sm:hover:scale-105 hover:z-50" >
-
-            <!-- image -->
-            <img class= "" src='https://image.tmdb.org/t/p/original<%= movie.backdrop_path || movie.poster_path %>'>
-            <!-- Description -->
-            <div class="p-2">
-                <p class="truncate max-w-md" ><%= movie.overview %></p>
-            <!-- title -->
-            <h2 class="mt-1 text-2xl text-white transition-all duration-100 ease-in-out group-hover:font-bold">
-                <%= movie.title || movie.name || movie.original_title %>   
-            </h2>
+            <!-- Click to redirect to movie page -->
+            <a href="/details/<%= movie.id%>">
+                <!-- image -->
+                <img class= "" src='https://image.tmdb.org/t/p/original<%= movie.backdrop_path || movie.poster_path %>'>
+                <!-- Description -->
+                <div class="p-2">
+                    <p class="truncate max-w-md" ><%= movie.overview %></p>
+                <!-- title -->
+                <h2 class="mt-1 text-2xl text-white transition-all duration-100 ease-in-out group-hover:font-bold">
+                    <%= movie.title || movie.name || movie.original_title %>   
+                </h2>
+            </a>
             <!-- Release Date and likes -->
             <p class="flex items-center opacity-0 group-hover:opacity-100">
-                <%= movie.media_type && `${movie.media_type}`%> &nbsp; • &nbsp;
+                <%= movie.media_type && `${movie.media_type}` || 'movie' %> &nbsp; • &nbsp;
                 <%= movie.release_date || movie.first_air_date %>&nbsp; • &nbsp;
                 <!-- Thumb icon -->
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">

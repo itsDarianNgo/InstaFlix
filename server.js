@@ -9,9 +9,12 @@ const flash = require('express-flash')
 const logger = require('morgan')
 const connectDB = require('./config/database')
 
+
+
 // Routes
 const mainRoutes = require('./routes/main')
 const todoRoutes = require('./routes/todos')
+const detailRoutes = require("./routes/details");
 // this will change the route used
 
 const path = require('path');
@@ -50,6 +53,7 @@ app.use(flash())
 // Routes
 app.use('/', mainRoutes)
 app.use('/todos', todoRoutes)
+app.use("/details", detailRoutes)
 
 app.listen(process.env.PORT, ()=>{
     console.log('Server is running, you better catch it!')

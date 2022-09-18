@@ -4,7 +4,11 @@ const API_KEY = process.env.API_KEY
 module.exports = {
     getIndex: async(req,res) => {
         try {
-            const moviesAPI = await axios.get(`https://api.themoviedb.org/3/trending/all/week?api_key=${API_KEY}`)
+            const moviesAPI = await axios.get(`https://api.themoviedb.org/3/movie/now_playing?api_key=${API_KEY}&language=en-US&page=1`)
+
+            // https://api.themoviedb.org/3/movie/now_playing?api_key=s&language=en-US&page=1
+            
+
             // console.log(moviesAPI.data)
             // changing res.render('movies') will change the rendered EJS page
             res.render('index.ejs', { movies : moviesAPI.data})
