@@ -174,6 +174,22 @@ module.exports = {
                 console.log(err.response.headers)
             } 
         }
-    }
+    },
+    postSearch: async(req,res) => {
+        let search = req.body.search
+
+        try {
+            const detailsAPI = await axios.get(`https://api.themoviedb.org/3/search/multi?api_key=${API_KEY}&language=en-US&query=${search}&page=1&include_adult=false`)
+            // console.log(moviesAPI.data)
+            // changing res.render('movies') will change the rendered EJS page
+            res.render('resultsSearch.ejs', { movies : detailsAPI.data})
+        } catch (err) {
+            if(err.response) {
+                console.log(err.response.data)
+                console.log(err.response.status)
+                console.log(err.response.headers)
+            } 
+        }
+    },
 
 }

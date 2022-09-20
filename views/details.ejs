@@ -9,5 +9,14 @@
 </head>
 <body>
     <%- include('partials/header') -%>
+
+    <!-- <img class= "" src='https://image.tmdb.org/t/p/original<%= movies.poster_path %>'> -->
+    <h2><%= movies.title %></h2>
+    <p><%= movies.overview %></p>
+    <span>Release date: <%= movies.release_date %></span>
+    <span>Run time: <%= movies.runtime %></span>
+    <span>Rating: <%= movies.vote_average %></span>
+    
+
 </body>
 </html>

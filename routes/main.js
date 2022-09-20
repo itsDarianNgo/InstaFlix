@@ -24,6 +24,11 @@ router.get('/western', homeController.getWestern)
 router.get('/animation', homeController.getAnimation)
 router.get('/tvmovie', homeController.getTvMovie)
 
+// Search
+router.post('/', homeController.postSearch)
+
+
+
 
 // router.get('/trending', authController.getTrending)
 
