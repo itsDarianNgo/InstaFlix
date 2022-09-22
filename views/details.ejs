@@ -8,15 +8,40 @@
     <title>InstaFlix</title>
 </head>
 <body>
-    <%- include('partials/header') -%>
 
-    <!-- <img class= "" src='https://image.tmdb.org/t/p/original<%= movies.poster_path %>'> -->
-    <h2><%= movies.title %></h2>
-    <p><%= movies.overview %></p>
-    <span>Release date: <%= movies.release_date %></span>
-    <span>Run time: <%= movies.runtime %></span>
-    <span>Rating: <%= movies.vote_average %></span>
+        <%- include('partials/header') -%>
+    <div class="p-4 inline-block">
+        <div>
+            <h2 class="text-4xl font-bold dark:text-white"><%= movies.title %></h2>
+            <p class="p-2 mb-4 text-sm font-normal text-gray-500 dark:text-gray-400">Genres</p>
+        </div>
+        <div  class="flex flex-wrap">
+            <img class= "max-h-96" src='https://image.tmdb.org/t/p/original<%= movies.poster_path %>'>
+            <img class= "max-h-96 flex-auto" src='https://image.tmdb.org/t/p/original<%= movies.poster_path %>'>
+        </div>
+
+
+        <div class="flex flex-nowrap">
+            <ul class="bg-red-500 flex-auto w-96">
+                <li>Release date: <%= movies.release_date %></li>
+                <li>Run time: <%= movies.runtime %></li>
+                <li>Rating: <%= movies.vote_average %></li>
+            </ul>
+            <p class="bg-blue-500 flex-auto"><%= movies.overview %></p>
+        </div>
+
+    </div>
+    <iframe class="iframe-preview" width="100%"  src="https://www.youtube.com/embed/<%= Array.from(trailer.results).filter(obj => obj.type === "Trailer").map(obj => obj.key)%>"> 
+    </iframe>
     
-
+    </body>
+    </html>
 </body>
 </html>
+
+
+
+
+
+
+
