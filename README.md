@@ -3,6 +3,8 @@ InstaFlix is a social networking and social cataloging fullstack web app for TV 
 
 **Link to project:** https://instaflixdb.herokuapp.com/
 
+**Demo Account:** test@gmail.com:test1234
+
 ![alt tag](https://i.imgur.com/E6Kyy2z.png)
 
 ## How It's Made:
